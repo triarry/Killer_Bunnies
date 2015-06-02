@@ -119,33 +119,4 @@ public class BunnyListeners implements Listener {
 			}
 		}
 	}
-	
-	@EventHandler
-	public void onBunnyDrops(EntityDeathEvent event) throws IOException{
-		Entity entity = event.getEntity();
-		String string = API.getFileHandler().getProperty(Files.BUNNY, "Bunny Configuration.Bunny Stats.Experience");
-		int exp;
-
-		try {
-			exp = Integer.parseInt(string);
-		} catch (Exception e) {
-			exp = 5;
-		}
-
-		if (API.isBunny(entity)) {
-			if (API.getFileHandler().getProperty(Files.BUNNY, "Bunny Configuration.Sounds.Death").equalsIgnoreCase("true")) {
-				entity.getLocation().getWorld().playSound(entity.getLocation(), Sound.ENDERDRAGON_GROWL, 1, 0);
-			}
-			event.setDroppedExp(exp);
-			List<String> newDrop = API.getFileHandler().getPropertyList(Files.BUNNY, "Bunny Configuration.Bunny Stats.Drops");
-			if (newDrop == null || newDrop.contains("") || newDrop.toString().equalsIgnoreCase("[]")) {
-				return;
-			}
-			
-			List<ItemStack> drops = new ArrayList<ItemStack>();
-			drops = API.createDrop().setDrop(entity, newDrop);
-
-			event.getDrops().addAll(drops);
-		}
-	}
 }

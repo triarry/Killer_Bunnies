@@ -1,6 +1,6 @@
 name: Killer_Bunnies
 main: me.triarry.Bunnies.Bunnies
-version: ${project.build.version}
+version: 1.0.0
 author: triarry, Mammothskier
 
 commands:

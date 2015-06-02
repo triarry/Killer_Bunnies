@@ -15,7 +15,6 @@ public class API {
 	private static Bunnies _bunnies;
 	private Commands commands;
 	private static FileHandler fileHandler;
-	private static DropsManager drops;
 
 	public API(Bunnies bunnies) {
 		_bunnies = bunnies;
@@ -23,7 +22,6 @@ public class API {
 		commands = new Commands(_bunnies);
 		_bunnies.getCommand("bunnies").setExecutor(commands);
 		fileHandler = new FileHandler(_bunnies);
-		drops = new DropsManager(_bunnies);
 	}
 
 	public static boolean isBunny(Entity entity) {
@@ -42,7 +40,4 @@ public class API {
 		return fileHandler;
 	}
 	
-	public static DropsManager createDrop() {
-		return drops;
-	}
 }
