@@ -28,7 +28,7 @@ public class BunnySpawnEvent extends Event {
 		try {
 			health = Double.parseDouble(string);
 		} catch (Exception e) {
-			health = 100;
+			health = 10;
 		}
 
 		if (!API.getBunnySpawnWorlds().contains(loc.getWorld().getName())) {

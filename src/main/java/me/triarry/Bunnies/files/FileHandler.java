@@ -81,40 +81,10 @@ public class FileHandler {
 				break;
 			case BUNNY:
 				YamlConfiguration Bunny = YamlConfiguration.loadConfiguration(file);
-				Bunny.set("Bunny Configuration.Spawn Settings.Chance", new Integer(10));
+				Bunny.set("Bunny Configuration.Spawn Settings.Chance", new Integer(15));
 				Bunny.set("Bunny Configuration.Spawn Settings.Worlds", loadWorlds());
-				Bunny.set("Bunny Configuration.Bunny Stats.Health", new Integer(100));
+				Bunny.set("Bunny Configuration.Bunny Stats.Health", new Integer(10));
 				Bunny.set("Bunny Configuration.Bunny Stats.Experience", new Integer(5));
-				Bunny.set("Bunny Configuration.Bunny Stats.Drops", Arrays.asList(loadDefaultDrop("Bunny")));
-				Bunny.set("Bunny Configuration.Damage Settings.Arrows.Damage done by arrow", new Integer(10));
-				Bunny.set("Bunny Configuration.Damage Settings.Fire.Allow Fire Damage", true);
-				Bunny.set("Bunny Configuration.Damage Settings.Block Damage.Allow Suffocation", false);
-				Bunny.set("Bunny Configuration.Damage Settings.Block Damage.Allow Cacti Damage", false);
-				Bunny.set("Bunny Configuration.Attack Mechanisms.Lightning Attack", false);
-				Bunny.set("Bunny Configuration.Attack Mechanisms.Stomp Attack.Enabled", false);
-				Bunny.set("Bunny Configuration.Attack Mechanisms.Stomp Attack.Explosion Power", new Integer(1));
-				Bunny.set("Bunny Configuration.Attack Mechanisms.Stomp Attack.Light Fire", false);
-				Bunny.set("Bunny Configuration.Attack Mechanisms.Kick Attack.Enabled", false);
-				Bunny.set("Bunny Configuration.Attack Mechanisms.Kick Attack.Kick Height", new Integer(1));
-				Bunny.set("Bunny Configuration.Attack Mechanisms.Fire Attack.Enabled", false);
-				Bunny.set("Bunny Configuration.Attack Mechanisms.Fire Attack.Ticks for Target", new Integer(100));
-				Bunny.set("Bunny Configuration.Attack Mechanisms.Fire Attack.Ticks for Bunny", new Integer(100));
-				Bunny.set("Bunny Configuration.Attack Mechanisms.Throw Boulder Attack.Enabled", false);
-				Bunny.set("Bunny Configuration.Attack Mechanisms.Throw Boulder Attack.Block Damage", new Integer(1));
-				Bunny.set("Bunny Configuration.Attack Mechanisms.Shrapnel Attack.Enabled", false);
-				Bunny.set("Bunny Configuration.Attack Mechanisms.Shrapnel Attack.Baby Zombies", false);
-				Bunny.set("Bunny Configuration.Attack Mechanisms.Shrapnel Attack.Zombies to Spawn", new Integer(3));
-				Bunny.set("Bunny Configuration.Attack Mechanisms.Shrapnel Attack.Health", new Integer(20));
-				Bunny.set("Bunny Configuration.Attack Mechanisms.Spawn Zombies On Death.Enabled", false);
-				Bunny.set("Bunny Configuration.Attack Mechanisms.Spawn Zombies On Death.Baby Zombies", false);
-				Bunny.set("Bunny Configuration.Attack Mechanisms.Spawn Zombies On Death.Zombies to Spawn", new Integer(5));
-				Bunny.set("Bunny Configuration.Attack Mechanisms.Spawn Zombies On Death.Health", new Integer(20));
-				Bunny.set("Bunny Configuration.Sounds.Stomp Attack", true);
-				Bunny.set("Bunny Configuration.Sounds.Fire Attack", true);
-				Bunny.set("Bunny Configuration.Sounds.Throw Boulder Attack", true);
-				Bunny.set("Bunny Configuration.Sounds.Kick Attack", true);
-				Bunny.set("Bunny Configuration.Sounds.Shrapnel Attack", true);
-				Bunny.set("Bunny Configuration.Sounds.Death", true);
 				try {
 					Bunny.save(file);
 				} catch (IOException e) {

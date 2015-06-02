@@ -58,7 +58,7 @@ public class Commands implements CommandExecutor {
 								try {
 									health = Double.parseDouble(string);
 								} catch (Exception e) {
-									health = 100;
+									health = 10;
 								}
 								
 								if(args.length ==  2){
