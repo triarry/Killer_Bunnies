@@ -1,30 +1,30 @@
-name: Giants
-main: me.Mammothskier.Giants.Giants
+name: Killer_Bunnies
+main: me.triarry.Bunnies.Bunnies
 version: ${project.build.version}
-author: Mammothskier
+author: triarry, Mammothskier
 
 commands:
-    giants:
+    bunnies:
         description: Shows list of commands.
 
 permissions:
-    giants.*:
+    bunnies.*:
         description: Gives all permissions.
         default: false
         children:
-            giants.reload: true
-            giants.debug: true
-            giants.spawn: true
-            giants.version: true
-    giants.reload:
+            bunnies.reload: true
+            bunnies.debug: true
+            bunnies.spawn: true
+            bunnies.version: true
+    bunnies.reload:
         description: Reloads the config file.
         default: false
-    giants.debug:
+    bunnies.debug:
         description: Shows Debug messages.
         default: false
-    giants.spawn:
+    bunnies.spawn:
         description: Spawns a Giant at the given location.
         default: false
-    giants.version:
+    bunnies.version:
         description: Displays the version of the plugin running on the server.
         default: false
